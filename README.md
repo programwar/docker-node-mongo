@@ -2,7 +2,7 @@
 
 > Simple example of a dockerized Node/Mongo app
 
-> Original respo was modified to create a REST API based on https://github.com/carlosazaustre/node-api-rest-example
+> Original repo was modified to create a REST API based on https://github.com/carlosazaustre/node-api-rest-example
 
 ## Quick Start
 
