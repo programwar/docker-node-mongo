@@ -2,6 +2,8 @@
 
 > Simple example of a dockerized Node/Mongo app
 
+> Original respo was modified to create a restfuf API based on https://github.com/carlosazaustre/node-api-rest-example
+
 ## Quick Start
 
 ```bash

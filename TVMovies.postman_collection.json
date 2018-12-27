@@ -1,0 +1,178 @@
+{
+	"info": {
+		"_postman_id": "c4c32e8a-c835-4ba8-9e25-c1eb34484aa0",
+		"name": "TVMovies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"LOST v2\",\n  \"year\": 2004,\n  \"country\": \"USA\",\n  \"poster\": \"http://ia.media-imdb.com/images/M/MV5BMjA3NzMyMzU1MV5BMl5BanBnXkFtZTcwNjc1ODUwMg@@._V1_SY317_CR17,0,214,317_.jpg\",\n  \"seasons\": 6,\n  \"genre\": \"Sci-Fi\",\n  \"summary\": \"The survivors of a plane crash are forced to live with each other on a remote island, a dangerous new world that poses unique threats of its own.\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tvshows",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tvshows"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT/:id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"_id\": \"5c2502d5995e9d0011283009\",\n    \"title\": \"LOST\",\n    \"year\": 2004,\n    \"country\": \"USA\",\n    \"poster\": \"http://ia.media-imdb.com/images/M/MV5BMjA3NzMyMzU1MV5BMl5BanBnXkFtZTcwNjc1ODUwMg@@._V1_SY317_CR17,0,214,317_.jpg\",\n    \"seasons\": 6,\n    \"genre\": \"Sci-Fi\",\n    \"summary\": \"The survivors of a plane crash are forced to live with each other on a remote island, a dangerous new world that poses unique threats of its own.\",\n    \"__v\": 0\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tvshows/5c2502d5995e9d0011283009",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tvshows",
+						"5c2502d5995e9d0011283009"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tvshows/5c250867fed1fa00113fd405",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tvshows",
+						"5c250867fed1fa00113fd405"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tvshows/5c2502d5995e9d0011283009",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tvshows",
+						"5c2502d5995e9d0011283009"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Ac",
+						"value": "ap",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/tvshows",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"tvshows"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
