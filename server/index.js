@@ -1,8 +1,9 @@
-var express         = require("express"),
+const express         = require("express"),
     app             = express(),
     bodyParser      = require("body-parser"),
     methodOverride  = require("method-override"),
-    mongoose        = require('mongoose');
+    mongoose        = require('mongoose'),
+    cors            = require('cors');
 
 // Connection to DB
 mongoose.connect('mongodb://mongo:27017/tvshows', function(err, res) {
@@ -16,18 +17,18 @@ app.use(bodyParser.json());
 app.use(methodOverride());
 
 // Import Models and controllers
-var models     = require('./models/tvshow')(app, mongoose);
-var TVShowCtrl = require('./controllers/tvshows');
+const models     = require('./models/tvshow')(app, mongoose);
+const TVShowCtrl = require('./controllers/tvshows');
 
 // Example Route
-var router = express.Router();
+const router = express.Router();
 router.get('/', function(req, res) {
   res.send("Please connect to /api/tvshows REST API");
 });
 app.use(router);
 
 // API routes
-var tvshows = express.Router();
+const tvshows = express.Router();
 
 tvshows.route('/tvshows')
   .get(TVShowCtrl.findAllTVShows)
@@ -39,6 +40,7 @@ tvshows.route('/tvshows/:id')
   .delete(TVShowCtrl.deleteTVShow);
 
 app.use('/api', tvshows);
+app.use(cors());
 
 // Start server
 app.listen(3000, function() {
