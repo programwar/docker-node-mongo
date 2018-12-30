@@ -14,11 +14,12 @@ export class AppComponent implements OnInit {
   private tvShows: Array<TvShow> = [];
 
   constructor(private  apiService:  APIService) { }
-  
+
   ngOnInit() {
       this.getContacts();
   }
-  public  getContacts(){
+  
+  public getContacts(){
       this.apiService.getTvShows().subscribe((data:  Array<TvShow>) => {
           this.tvShows = data;
           console.log(data);
